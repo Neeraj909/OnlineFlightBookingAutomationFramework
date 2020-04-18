@@ -90,4 +90,12 @@ public class FlightBookingRepo extends UIBase {
 	public List<WebElement> selectFlight(int num){
 		return getDriver().findElements(By.cssSelector("form[name='results']>table:nth-of-type("+num+")>tbody>tr>td.frame_action_xrows"));
 	}
+	
+	public List<WebElement> firstName(){
+		return getDriver().findElements(By.cssSelector("input[name*='First']"));
+	}
+	public List<WebElement> lastName(){
+		return getDriver().findElements(By.cssSelector("input[name*='Last']"));
+	}
+	
 }
