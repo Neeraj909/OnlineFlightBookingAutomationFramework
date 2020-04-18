@@ -25,7 +25,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class TestNgListener implements ITestListener{
 	public void onTestStart(ITestResult result) {
 
-        System.out.println("Test case Start and detail are" + result.getName());
+        System.out.println("Test case Start and detail are-->" + result.getName());
         ExtentTestManager.startTest(result.getMethod().getMethodName(), "");
 
 
@@ -33,7 +33,7 @@ public class TestNgListener implements ITestListener{
 
     public void onTestSuccess(ITestResult result) {
 
-        System.out.println("Test case pass and detail are " + result.getName());
+        System.out.println("Test case pass and detail are -->" + result.getName());
         ExtentTestManager.getTest().log(LogStatus.PASS, "Test passed");
 
     }
@@ -53,7 +53,7 @@ public class TestNgListener implements ITestListener{
             }
         }
 
-        System.out.println("Test case Fail and detail are" + result.getName());
+        System.out.println("Test case Fail and detail are-->" + result.getName());
         ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Failed",
                 ExtentTestManager.getTest().addScreenCapture(failureImageFileName));
 
@@ -61,24 +61,24 @@ public class TestNgListener implements ITestListener{
 
     public void onTestSkipped(ITestResult result) {
 
-        System.out.println("Test case Skipped and detail are" + result.getName());
+        System.out.println("Test case Skipped and detail are--->" + result.getName());
         ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped");
 
     }
 
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 
-        System.out.println("Test case fail withSuccesspercentage and detail are" + result.getName());
+        System.out.println("Test case fail withSuccesspercentage and detail are--->" + result.getName());
 
     }
 
     public void onStart(ITestContext context) {
-        System.out.println("Test case Start context and detail are" + context.getName());
+        System.out.println("Test case Start context and detail are-->" + context.getName());
     }
 
     public void onFinish(ITestContext context) {
 
-        System.out.println("Test case finish context and detail are" + context.getName());
+        System.out.println("Test case finish context and detail are--->" + context.getName());
         ExtentTestManager.endTest();
         ExtentManager.getInstance().flush();
     }
