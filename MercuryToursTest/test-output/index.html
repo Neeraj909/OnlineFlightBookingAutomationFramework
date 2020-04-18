@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-FlightBookingTest">
-              <span class="suite-name border-passed">FlightBookingTest</span>
+              <span class="suite-name border-failed">FlightBookingTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,  4 skipped,  2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-FlightBookingTest" class="hide-methods failed suite-FlightBookingTest"> (hide)</a> <!-- hide-methods failed suite-FlightBookingTest -->
+                      <a href="#" panel-name="suite-FlightBookingTest" class="show-methods failed suite-FlightBookingTest"> (show)</a> <!-- show-methods failed suite-FlightBookingTest -->
+                    </span>
+                    <div class="method-list-content failed suite-FlightBookingTest">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)">bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-FlightBookingTest -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-FlightBookingTest" class="hide-methods skipped suite-FlightBookingTest"> (hide)</a> <!-- hide-methods skipped suite-FlightBookingTest -->
+                      <a href="#" panel-name="suite-FlightBookingTest" class="show-methods skipped suite-FlightBookingTest"> (show)</a> <!-- show-methods skipped suite-FlightBookingTest -->
+                    </span>
+                    <div class="method-list-content skipped suite-FlightBookingTest">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="billingAddress">billingAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="deliveryAddress">deliveryAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="enterPassengerData">enterPassengerData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="selectFlightMinPrice">selectFlightMinPrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-FlightBookingTest -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +143,11 @@
                       <a href="#" panel-name="suite-FlightBookingTest" class="show-methods passed suite-FlightBookingTest"> (show)</a> <!-- show-methods passed suite-FlightBookingTest -->
                     </span>
                     <div class="method-list-content passed suite-FlightBookingTest">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)">bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="loginToSite">loginToSite</a> <!-- method navigator-link -->
@@ -117,12 +165,94 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FlightBookingTest" class="panel FlightBookingTest">
+          <div class="suite-FlightBookingTest-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.nt.test.FlightBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)">
+                  </a> <!-- bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines) -->
+                  <span class="method-name">bookFlight</span>
+                  <span class="parameters">(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)</span>
+                  <div class="stack-trace">org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;input&quot;
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;JIVOXLAPMAC0034.local&apos;, ip: &apos;fe80:0:0:0:10ab:eb9f:5391:55e9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.4&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:47)
+	at com.nt.base.UIBase.selectClass(UIBase.java:77)
+	at com.nt.actions.FlightBookingUIActions.bookFlight(FlightBookingUIActions.java:41)
+	at com.nt.test.FlightBookingTest.bookFlight(FlightBookingTest.java:47)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FlightBookingTest-class-failed -->
+          <div class="suite-FlightBookingTest-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.nt.test.FlightBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="billingAddress">
+                  </a> <!-- billingAddress -->
+                  <span class="method-name">billingAddress</span>
+                  <div class="stack-trace">java.lang.Throwable: Method FlightBookingTest.billingAddress(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:com.nt.test.FlightBookingTest@11a9e7c8] depends on not successfully finished methods
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deliveryAddress">
+                  </a> <!-- deliveryAddress -->
+                  <span class="method-name">deliveryAddress</span>
+                  <div class="stack-trace">java.lang.Throwable: Method FlightBookingTest.deliveryAddress(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:com.nt.test.FlightBookingTest@11a9e7c8] depends on not successfully finished methods
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterPassengerData">
+                  </a> <!-- enterPassengerData -->
+                  <span class="method-name">enterPassengerData</span>
+                  <div class="stack-trace">java.lang.Throwable: Method FlightBookingTest.enterPassengerData(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:com.nt.test.FlightBookingTest@11a9e7c8] depends on not successfully finished methods
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectFlightMinPrice">
+                  </a> <!-- selectFlightMinPrice -->
+                  <span class="method-name">selectFlightMinPrice</span>
+                  <div class="stack-trace">java.lang.Throwable: Method FlightBookingTest.selectFlightMinPrice()[pri:3, instance:com.nt.test.FlightBookingTest@11a9e7c8] depends on not successfully finished methods
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FlightBookingTest-class-skipped -->
           <div class="suite-FlightBookingTest-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.nt.test.FlightBookingTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)">
+                  </a> <!-- bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines) -->
+                  <span class="method-name">bookFlight</span>
+                  <span class="parameters">(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="loginToSite">
@@ -135,13 +265,13 @@
         </div> <!-- panel FlightBookingTest -->
         <div panel-name="test-xml-FlightBookingTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/neerajsharma/Documents/workspace/MercuryToursTest/src/test/java/com/nt/resources/testng.xml</span>
+            <span class="header-content">/Users/neerajsharma/git/OnlineFlightBookingAutomationFramework/MercuryToursTest/src/test/java/com/nt/resources/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;FlightBookingTest&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;FlightBookingTest&quot;&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;env&quot; value=&quot;Prod&quot;/&gt;
   &lt;listeners&gt;
@@ -189,16 +319,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginToSite')
 data.setCell(0, 2, 'com.nt.test.FlightBookingTest')
-data.setCell(0, 3, 9513);
+data.setCell(0, 3, 9301);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'bookFlight')
+data.setCell(1, 2, 'com.nt.test.FlightBookingTest')
+data.setCell(1, 3, 6713);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'bookFlight')
+data.setCell(2, 2, 'com.nt.test.FlightBookingTest')
+data.setCell(2, 3, 23);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'billingAddress')
+data.setCell(3, 2, 'com.nt.test.FlightBookingTest')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'deliveryAddress')
+data.setCell(4, 2, 'com.nt.test.FlightBookingTest')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'enterPassengerData')
+data.setCell(5, 2, 'com.nt.test.FlightBookingTest')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'selectFlightMinPrice')
+data.setCell(6, 2, 'com.nt.test.FlightBookingTest')
+data.setCell(6, 3, 0);
 window.suiteTableData['FlightBookingTest']= { tableData: data, tableDiv: 'times-div-FlightBookingTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-FlightBookingTest">
               </div> <!-- times-div-FlightBookingTest -->
             </div> <!-- times-div -->
@@ -231,11 +385,21 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">loginToSite</span>
-                <span class="method-start">5957 ms</span>
+                <span class="method-start">3606 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)</span>
+                <span class="method-start">13354 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)</span>
+                <span class="method-start">20069 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">20682 ms</span>
+                <span class="method-start">26034 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
