@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.nt.utills.CommonUtills;
@@ -71,6 +72,13 @@ public class UIBase {
 		getDriver().manage().timeouts().implicitlyWait(UIBase.IMPLICIT_WAIT, TimeUnit.SECONDS);
         getDriver().get(CommonUtills.getEnv().getConfig().getEnvironment().getURL());
 		
+	}
+	public Select selectClass(WebElement ele) {
+		return new Select(ele);
+	}
+	
+	public String replaceSpecialCharFromString(String s1) {
+		  return s1.replaceAll("[^\\d]",""); 
 	}
 
 }
