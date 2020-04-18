@@ -1,58 +1,85 @@
 package com.nt.test;
 
+import java.lang.reflect.Method;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+
 import com.nt.actions.FlightBookingUIActions;
-import com.nt.actions.NoBrokerUIActions;
+
 import com.nt.annotation.Author;
 import com.nt.annotation.TestCaseNotes;
 import com.nt.annotation.TesterName;
+import com.nt.base.DataSource;
 import com.nt.repo.FlightBookingRepo;
 import com.nt.utills.CommonUtills;
-import com.sun.org.apache.xerces.internal.impl.xpath.XPath.Step;
 
 public class FlightBookingTest extends FlightBookingRepo {
 	FlightBookingUIActions flightBookingUIActions;
-	@Parameters({"env","browserName"})
-	@Author(name=TesterName.Neeraj)
+	static Logger logger = Logger.getLogger(FlightBookingTest.class.getName());
+	@Parameters({ "env", "browserName" })
+	@Author(name = TesterName.Neeraj)
 	@BeforeSuite
-	public void beforeTest(String env,String browserName) throws Exception {
+	public void beforeTest(String env, String browserName) throws Exception {
 		CommonUtills.setEnv(env);
 		browserInitialization(browserName);
 		flightBookingUIActions = new FlightBookingUIActions();
 		CommonUtills.cleanFolder();
 	}
-   
-    @TestCaseNotes(Steps="login to mercury site")
+
+	@TestCaseNotes(Steps = "login to mercury site")
 	@Test(priority = 1)
-	public void loginToSite(){
-    	flightBookingUIActions.login();
+	public void loginToSite() {
+		flightBookingUIActions.login();
 
 	}
-    @TestCaseNotes(Steps="booking flight")
-   	@Test(priority = 2, dataProvider = "Production",dependsOnMethods ="loginToSite")
-   	public void bookingFlight(){
-     
 
-   	}
-	@DataProvider(name = "Production")
-	public Object[][] data() {
-		Object[][] arrayObject = CommonUtills.getTestData("Sheet1");
-		return arrayObject;
+	@TestCaseNotes(Steps = "booking flight")
+	@Test(dataProvider = "dataProviderData", priority = 2, dependsOnMethods = "loginToSite",dataProviderClass=DataSource.class)
+	public void bookFlight(String noOfPess,String departFrom,String departOn,String departDay,String arrivingOn,String returnOn,String returnDay,String airine){
+		flightBookingUIActions.bookFlight(noOfPess,departFrom,departOn,departDay,arrivingOn,returnOn,returnDay,airine);
+
 	}
-	
+
+	@TestCaseNotes(Steps = "select flight with minimum price")
+	@Test(priority = 3, dependsOnMethods = "bookFlight")
+	public void selectFlightMinPrice() {
+		flightBookingUIActions.checkFlightPriceAndSelect();
+
+	}
+
+	@TestCaseNotes(Steps = "Enter Passenger dtails")
+	@Test(dataProvider = "dataProviderData", priority = 4,dependsOnMethods="selectFlightMinPrice",dataProviderClass=DataSource.class)
+	public void enterPassengerData(String firsName,String lastName,String mealType,String cardType,String cardExpMonth,String cardExpYear,String cardHoldername,String cardHolderMiddleName,String cardHolderLastName)  {
+		flightBookingUIActions.enterPassengersDetails( firsName, lastName, mealType, cardType, cardExpMonth, cardExpYear, cardHoldername, cardHolderMiddleName, cardHolderLastName);
+
+	}
+
+	@TestCaseNotes(Steps = "Enter Passenger dtails")
+	@Test(dataProvider = "dataProviderData", priority = 5, dependsOnMethods = "enterPassengerData",dataProviderClass=DataSource.class)
+	public void billingAddress(String billAddress,String city,String state,String pinCode,String country) throws InterruptedException {
+		flightBookingUIActions.enterBillinAddress( billAddress, city, state, pinCode, country);
+
+	}
+
+	@TestCaseNotes(Steps = "Enter Passenger dtails")
+	@Test(dataProvider = "dataProviderData", priority = 6, dependsOnMethods = "billingAddress",dataProviderClass=DataSource.class)
+	public void deliveryAddress(String deliAddress,String city,String state,String pinCode,String country) throws InterruptedException {
+		flightBookingUIActions.EnterDeliveringAdress( deliAddress, city, state, pinCode, country);
+	}
+
+
 	@AfterSuite
 	public void afterSuite() {
 		getDriver().close();
 
-		
 	}
 
 }
