@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Nobroker Test Automation Suite]">
+  <parameter name="env" value="Prod"/>
+  <listeners>
+    <listener class-name="com.nt.listener.TestNgListener"/>
+  </listeners>
+  <test name="Nobroker(failed)">
+    <classes>
+      <class name="com.nt.test.FlightBookingTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
+          <include name="loginToSite"/>
+        </methods>
+      </class> <!-- com.nt.test.FlightBookingTest -->
+    </classes>
+  </test> <!-- Nobroker(failed) -->
+</suite> <!-- Failed suite [Nobroker Test Automation Suite] -->
