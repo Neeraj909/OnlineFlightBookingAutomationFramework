@@ -62,6 +62,7 @@ public class FlightBookingUIActions extends FlightBookingRepo {
 		select = selectClass(preference());
 		select.selectByVisibleText(airine);
 		continueBtn().click();
+		checkFlightPriceAndSelect();
 		
 
 	}
