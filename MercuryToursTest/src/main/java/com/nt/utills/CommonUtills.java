@@ -17,7 +17,7 @@ public class CommonUtills {
 	static Workbook book;
 	static Sheet sheet;
 	public static Env env;
-	static String filePath = "" + System.getProperty("user.dir") + "/resources/Nobroker.xlsx";
+	static String filePath = "" + System.getProperty("user.dir") + "/resources/TestData.xlsx";
 	static String folderPath = System.getProperty("user.dir") + "/screenshot";
 
 	public static Env getEnv() {
