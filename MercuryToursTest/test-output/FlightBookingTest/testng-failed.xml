@@ -15,9 +15,7 @@
           <include name="enterPassengerData"/>
           <include name="afterSuite"/>
           <include name="deliveryAddress"/>
-          <include name="loginToSite"/>
-          <include name="selectFlightMinPrice"/>
-          <include name="bookFlight" invocation-numbers="1"/>
+          <include name="bookFlight"/>
         </methods>
       </class> <!-- com.nt.test.FlightBookingTest -->
     </classes>

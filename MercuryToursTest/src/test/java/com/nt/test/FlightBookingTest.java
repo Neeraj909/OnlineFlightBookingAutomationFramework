@@ -1,7 +1,5 @@
 package com.nt.test;
 
-
-
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -19,6 +17,7 @@ import com.nt.utills.CommonUtills;
 public class FlightBookingTest extends FlightBookingRepo {
 	FlightBookingUIActions flightBookingUIActions;
 	static Logger logger = Logger.getLogger(FlightBookingTest.class.getName());
+
 	@Parameters({ "env", "browserName" })
 	@Author(name = TesterName.Neeraj)
 	@BeforeSuite
@@ -37,10 +36,11 @@ public class FlightBookingTest extends FlightBookingRepo {
 //	}
 
 	@TestCaseNotes(Steps = "booking flight")
-	@Test(dataProvider = "dataProviderData", priority = 1,dataProviderClass=DataSource.class)
-	public void bookFlight(String noOfPess,String departFrom,String departOn,String departDay,String arrivingOn,String returnOn,String returnDay,String airine){
-		
-		flightBookingUIActions.bookFlight(noOfPess,departFrom,departOn,departDay,arrivingOn,returnOn,returnDay,airine);
+	@Test(dataProvider = "dataProviderData", priority = 1, dataProviderClass = DataSource.class)
+	public void bookFlight(String noOfPess, String departFrom, String departOn, String departDay, String arrivingOn,
+			String returnOn, String returnDay, String airine) {
+		flightBookingUIActions.bookFlight(noOfPess, departFrom, departOn, departDay, arrivingOn, returnOn, returnDay,
+				airine);
 
 	}
 
@@ -52,25 +52,29 @@ public class FlightBookingTest extends FlightBookingRepo {
 //	}
 
 	@TestCaseNotes(Steps = "Enter Passenger dtails")
-	@Test(dataProvider = "dataProviderData", priority = 2,dependsOnMethods="bookFlight",dataProviderClass=DataSource.class)
-	public void enterPassengerData(String firsName,String lastName,String mealType,String cardType,String cardExpMonth,String cardExpYear,String cardHoldername,String cardHolderMiddleName,String cardHolderLastName)  {
-		flightBookingUIActions.enterPassengersDetails( firsName, lastName, mealType, cardType, cardExpMonth, cardExpYear, cardHoldername, cardHolderMiddleName, cardHolderLastName);
+	@Test(dataProvider = "dataProviderData", priority = 2, dependsOnMethods = "bookFlight", dataProviderClass = DataSource.class)
+	public void enterPassengerData(String firsName, String lastName, String mealType, String cardType,
+			String cardExpMonth, String cardExpYear, String cardHoldername, String cardHolderMiddleName,
+			String cardHolderLastName) {
+		flightBookingUIActions.enterPassengersDetails(firsName, lastName, mealType, cardType, cardExpMonth, cardExpYear,
+				cardHoldername, cardHolderMiddleName, cardHolderLastName);
 
 	}
 
 	@TestCaseNotes(Steps = "Enter Passenger dtails")
-	@Test(dataProvider = "dataProviderData", priority = 3, dependsOnMethods = "enterPassengerData",dataProviderClass=DataSource.class)
-	public void billingAddress(String billAddress,String city,String state,String pinCode,String country) throws InterruptedException {
-		flightBookingUIActions.enterBillinAddress( billAddress, city, state, pinCode, country);
+	@Test(dataProvider = "dataProviderData", priority = 3, dependsOnMethods = "enterPassengerData", dataProviderClass = DataSource.class)
+	public void billingAddress(String billAddress, String city, String state, String pinCode, String country)
+			throws InterruptedException {
+		flightBookingUIActions.enterBillinAddress(billAddress, city, state, pinCode, country);
 
 	}
 
 	@TestCaseNotes(Steps = "Enter Passenger dtails")
-	@Test(dataProvider = "dataProviderData", priority = 5, dependsOnMethods = "billingAddress",dataProviderClass=DataSource.class)
-	public void deliveryAddress(String deliAddress,String city,String state,String pinCode,String country) throws InterruptedException {
-		flightBookingUIActions.EnterDeliveringAdress( deliAddress, city, state, pinCode, country);
+	@Test(dataProvider = "dataProviderData", priority = 5, dependsOnMethods = "billingAddress", dataProviderClass = DataSource.class)
+	public void deliveryAddress(String deliAddress, String city, String state, String pinCode, String country)
+			throws InterruptedException {
+		flightBookingUIActions.EnterDeliveringAdress(deliAddress, city, state, pinCode, country);
 	}
-
 
 	@AfterSuite
 	public void afterSuite() {

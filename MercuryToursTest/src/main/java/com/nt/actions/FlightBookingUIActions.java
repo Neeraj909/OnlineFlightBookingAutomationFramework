@@ -37,7 +37,7 @@ public class FlightBookingUIActions extends FlightBookingRepo {
 	}
 
 	public void bookFlight(String noOfPess,String departFrom,String departOn,String departDay,String arrivingOn,String returnOn,String returnDay,String airine){
-		
+		login();
 		select = selectClass(selectPassengers());
 		select.selectByVisibleText(String.valueOf(Math.round(Float.parseFloat(noOfPess))));
 		select = selectClass(departingFrom());
