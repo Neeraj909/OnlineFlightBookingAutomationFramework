@@ -24,8 +24,9 @@ public class UIBase {
 
 	public WebDriverWait getWebDriverWait() {
 		if (webDriverWait == null) {
+			webDriverWait = new WebDriverWait(getDriver(), 30);
 		}
-		webDriverWait = new WebDriverWait(getDriver(), 30);
+		
 		return webDriverWait;
 	}
 

@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [FlightBookingTest]">
-  <parameter name="browserName" value="chrome"/>
-  <parameter name="env" value="Prod"/>
   <listeners>
-    <listener class-name="com.nt.listener.TestNgListener"/>
+    <listener class-name="ExecuteFailedTestCases.RetryListenerClass"/>
   </listeners>
-  <test name="FlightBooking(failed)">
+  <test name="Test2(failed)">
     <classes>
-      <class name="com.nt.test.FlightBookingTest">
+      <class name="ExecuteFailedTestCases.Test2">
         <methods>
-          <include name="billingAddress"/>
-          <include name="beforeTest"/>
-          <include name="enterPassengerData"/>
-          <include name="afterSuite"/>
-          <include name="deliveryAddress"/>
-          <include name="bookFlight"/>
+          <include name="test2"/>
         </methods>
-      </class> <!-- com.nt.test.FlightBookingTest -->
+      </class> <!-- ExecuteFailedTestCases.Test2 -->
     </classes>
-  </test> <!-- FlightBooking(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [FlightBookingTest] -->

@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-FlightBookingTest">
-                    <span>testng.xml</span>
+                    <span>Failtest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-FlightBookingTest">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,  2 skipped,  2 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,  3 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-FlightBookingTest">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="enterPassengerData">enterPassengerData</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="ExecuteFailedTestCases.Test2" hash-for-method="test2">test2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-FlightBookingTest -->
@@ -116,12 +116,17 @@
                     <div class="method-list-content skipped suite-FlightBookingTest">
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="billingAddress">billingAddress</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="ExecuteFailedTestCases.Test2" hash-for-method="test2">test2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="deliveryAddress">deliveryAddress</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="ExecuteFailedTestCases.Test2" hash-for-method="test2">test2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="ExecuteFailedTestCases.Test2" hash-for-method="test2">test2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-FlightBookingTest -->
@@ -135,12 +140,7 @@
                     <div class="method-list-content passed suite-FlightBookingTest">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)">bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="com.nt.test.FlightBookingTest" hash-for-method="bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)">bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FlightBookingTest" title="ExecuteFailedTestCases.Test1" hash-for-method="test1">test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FlightBookingTest -->
@@ -158,19 +158,17 @@
           <div class="suite-FlightBookingTest-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.nt.test.FlightBookingTest</span>
+              <span class="class-name">ExecuteFailedTestCases.Test2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="enterPassengerData">
-                  </a> <!-- enterPassengerData -->
-                  <span class="method-name">enterPassengerData</span>
-                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
-Data provider mismatch
-Method: enterPassengerData([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)Silk Board,(java.lang.String)Bangalore,(java.lang.String)KA,(java.lang.String)560068.0,(java.lang.String)INDIA]
-... Removed 20 stack frames
+                  <a name="test2">
+                  </a> <!-- test2 -->
+                  <span class="method-name">test2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at ExecuteFailedTestCases.Test2.test2(Test2.java:10)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -179,26 +177,39 @@ Arguments: [(java.lang.String)Silk Board,(java.lang.String)Bangalore,(java.lang.
           <div class="suite-FlightBookingTest-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.nt.test.FlightBookingTest</span>
+              <span class="class-name">ExecuteFailedTestCases.Test2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="billingAddress">
-                  </a> <!-- billingAddress -->
-                  <span class="method-name">billingAddress</span>
-                  <div class="stack-trace">java.lang.Throwable: Method FlightBookingTest.billingAddress(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:com.nt.test.FlightBookingTest@11a9e7c8] depends on not successfully finished methods
-... Removed 18 stack frames
+                  <a name="test2">
+                  </a> <!-- test2 -->
+                  <span class="method-name">test2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at ExecuteFailedTestCases.Test2.test2(Test2.java:10)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="deliveryAddress">
-                  </a> <!-- deliveryAddress -->
-                  <span class="method-name">deliveryAddress</span>
-                  <div class="stack-trace">java.lang.Throwable: Method FlightBookingTest.deliveryAddress(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:com.nt.test.FlightBookingTest@11a9e7c8] depends on not successfully finished methods
-... Removed 18 stack frames
+                  <a name="test2">
+                  </a> <!-- test2 -->
+                  <span class="method-name">test2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at ExecuteFailedTestCases.Test2.test2(Test2.java:10)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test2">
+                  </a> <!-- test2 -->
+                  <span class="method-name">test2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at ExecuteFailedTestCases.Test2.test2(Test2.java:10)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -207,23 +218,14 @@ Arguments: [(java.lang.String)Silk Board,(java.lang.String)Bangalore,(java.lang.
           <div class="suite-FlightBookingTest-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nt.test.FlightBookingTest</span>
+              <span class="class-name">ExecuteFailedTestCases.Test1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)">
-                  </a> <!-- bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines) -->
-                  <span class="method-name">bookFlight</span>
-                  <span class="parameters">(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)">
-                  </a> <!-- bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines) -->
-                  <span class="method-name">bookFlight</span>
-                  <span class="parameters">(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)</span>
+                  <a name="test1">
+                  </a> <!-- test1 -->
+                  <span class="method-name">test1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,23 +233,26 @@ Arguments: [(java.lang.String)Silk Board,(java.lang.String)Bangalore,(java.lang.
         </div> <!-- panel FlightBookingTest -->
         <div panel-name="test-xml-FlightBookingTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/neerajsharma/git/OnlineFlightBookingAutomationFramework/MercuryToursTest/src/test/java/com/nt/resources/testng.xml</span>
+            <span class="header-content">/Users/neerajsharma/git/OnlineFlightBookingAutomationFramework/MercuryToursTest/src/test/java/com/nt/resources/Failtest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;FlightBookingTest&quot;&gt;
-  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
-  &lt;parameter name=&quot;env&quot; value=&quot;Prod&quot;/&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.nt.listener.TestNgListener&quot;/&gt;
+    &lt;listener class-name=&quot;ExecuteFailedTestCases.RetryListenerClass&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;FlightBooking&quot;&gt;
+  &lt;test name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nt.test.FlightBookingTest&quot;/&gt;
+      &lt;class name=&quot;ExecuteFailedTestCases.Test1&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- FlightBooking --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test name=&quot;Test2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;ExecuteFailedTestCases.Test2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
 &lt;/suite&gt; &lt;!-- FlightBookingTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -259,7 +264,10 @@ Arguments: [(java.lang.String)Silk Board,(java.lang.String)Bangalore,(java.lang.
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">FlightBooking (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -287,30 +295,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'bookFlight')
-data.setCell(0, 2, 'com.nt.test.FlightBookingTest')
-data.setCell(0, 3, 18501);
+data.setCell(0, 1, 'test1')
+data.setCell(0, 2, 'ExecuteFailedTestCases.Test1')
+data.setCell(0, 3, 9);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'bookFlight')
-data.setCell(1, 2, 'com.nt.test.FlightBookingTest')
-data.setCell(1, 3, 13125);
+data.setCell(1, 1, 'test2')
+data.setCell(1, 2, 'ExecuteFailedTestCases.Test2')
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'enterPassengerData')
-data.setCell(2, 2, 'com.nt.test.FlightBookingTest')
-data.setCell(2, 3, 32);
+data.setCell(2, 1, 'test2')
+data.setCell(2, 2, 'ExecuteFailedTestCases.Test2')
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deliveryAddress')
-data.setCell(3, 2, 'com.nt.test.FlightBookingTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'test2')
+data.setCell(3, 2, 'ExecuteFailedTestCases.Test2')
+data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'billingAddress')
-data.setCell(4, 2, 'com.nt.test.FlightBookingTest')
-data.setCell(4, 3, 0);
+data.setCell(4, 1, 'test2')
+data.setCell(4, 2, 'ExecuteFailedTestCases.Test2')
+data.setCell(4, 3, 1);
 window.suiteTableData['FlightBookingTest']= { tableData: data, tableDiv: 'times-div-FlightBookingTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 14 ms</span>
               <div id="times-div-FlightBookingTest">
               </div> <!-- times-div-FlightBookingTest -->
             </div> <!-- times-div -->
@@ -336,23 +344,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nt.test.FlightBookingTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeTest(Prod, chrome)</span>
+              <div class="chronological-class-name">ExecuteFailedTestCases.Test1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test1</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ExecuteFailedTestCases.Test2</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">bookFlight(1.0, Frankfurt, February, 10.0, New York, March, 21.0, Blue Skies Airlines)</span>
-                <span class="method-start">3709 ms</span>
+                <span class="method-name">test2</span>
+                <span class="method-start">5045 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">bookFlight(2.0, New York, March, 12.0, Frankfurt, June, 23.0, Blue Skies Airlines)</span>
-                <span class="method-start">22212 ms</span>
+                <span class="method-name">test2</span>
+                <span class="method-start">5049 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">41250 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="test-method">
+                <span class="method-name">test2</span>
+                <span class="method-start">5052 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2</span>
+                <span class="method-start">5054 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
